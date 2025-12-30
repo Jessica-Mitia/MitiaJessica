@@ -1,4 +1,5 @@
 import { MapPin, GraduationCap, Sparkles } from "lucide-react";
+import jessica from "../assets/images/jessica.jpg";
 
 const HeroSection = () => {
   return (
@@ -51,7 +52,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <img src="/src/assets/images/jessica.jpg" alt="Jessica Mitia" className="mt-8 rounded-[50%] shadow-lg mx-auto w-80 h-80 object-cover" />
+            <img src={jessica} alt="Jessica Mitia" className="mt-8 rounded-[50%] shadow-lg mx-auto w-80 h-80 object-cover" />
           </div>
 
           <div className="animate-fade-up opacity-0 animation-delay-400">
