@@ -31,28 +31,30 @@ const HeroSection = () => {
                 créativité et fun pour livrer des expériences web qui font
                 buguer… d’admiration !
               </p>
-
-              <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-up opacity-0 animation-delay-300">
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#faf7f2] rounded-full border border-[#e5dfd6] shadow-[0_4px_20px_-4px_rgba(31,41,51,0.08)]">
-                  <MapPin className="w-4 h-4 text-[#f28c6a]" />
-                  <span className="text-sm font-medium text-[#1f2933]">
-                    Antananarivo
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#faf7f2] rounded-full border border-[#e5dfd6] shadow-[0_4px_20px_-4px_rgba(31,41,51,0.08)]">
-                  <GraduationCap className="w-4 h-4 text-[#4f9a94]" />
-                  <span className="text-sm font-medium text-[#1f2933]">
-                    Étudiante L2 à HEI
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-[#faf7f2] rounded-full border border-[#e5dfd6] shadow-[0_4px_20px_-4px_rgba(31,41,51,0.08)]">
-                  <span className="text-sm font-medium text-[#1f2933]">
-                    18 ans
-                  </span>
-                </div>
-              </div>
             </div>
-            <img src={jessica} alt="Jessica Mitia" className="mt-8 rounded-[50%] shadow-lg mx-auto w-80 h-80 object-cover" />
+            <img
+              src={jessica}
+              alt="Jessica Mitia"
+              className="mt-8 rounded-[50%] shadow-lg mx-auto w-80 h-80 object-cover"
+            />
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 my-12 animate-fade-up opacity-0 animation-delay-300">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#faf7f2] rounded-full border border-[#e5dfd6] shadow-[0_4px_20px_-4px_rgba(31,41,51,0.08)]">
+              <MapPin className="w-4 h-4 text-[#f28c6a]" />
+              <span className="text-sm font-medium text-[#1f2933]">
+                Antananarivo
+              </span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#faf7f2] rounded-full border border-[#e5dfd6] shadow-[0_4px_20px_-4px_rgba(31,41,51,0.08)]">
+              <GraduationCap className="w-4 h-4 text-[#4f9a94]" />
+              <span className="text-sm font-medium text-[#1f2933]">
+                Étudiante L2 à HEI
+              </span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#faf7f2] rounded-full border border-[#e5dfd6] shadow-[0_4px_20px_-4px_rgba(31,41,51,0.08)]">
+              <span className="text-sm font-medium text-[#1f2933]">18 ans</span>
+            </div>
           </div>
 
           <div className="animate-fade-up opacity-0 animation-delay-400">

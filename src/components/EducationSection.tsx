@@ -2,21 +2,21 @@ import { GraduationCap, BookOpen, Award } from "lucide-react";
 
 const educationData = [
   {
-    year: "2024 - Présent",
+    year: "2025 - 2026",
     title: "Licence 2",
     school: "HEI (Haute École d'Informatique)",
     icon: GraduationCap,
     current: true,
   },
   {
-    year: "2023 - 2024",
+    year: "2024 - 2025",
     title: "Licence 1",
     school: "HEI (Haute École d'Informatique)",
     icon: BookOpen,
     current: false,
   },
   {
-    year: "2023",
+    year: "2023 - 2024",
     title: "Baccalauréat Série D",
     school: "Lycée Sainte Famille Anosivavaka",
     icon: Award,

@@ -1,11 +1,37 @@
 import { Mail, MapPin, Github, Linkedin, Send, Facebook, Phone } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const ContactSection = () => {
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+    emailjs
+      .sendForm("service_p5evpvk", "template_ybp4w99", form.current, {
+        publicKey: "H4ktd-vh5WAL8RC_8",
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          alert('Message envoyé avec succès !');
+          if (form.current) {
+            form.current.reset(); 
+          } 
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Échec de l\'envoi du message.');
+        },
+      );
+  };
+
   return (
     <section id="contact" className="py-24 bg-[#faf7f2]">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          {/* Section header */}
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1 bg-[#f28c6a]/10 text-[#f28c6a] rounded-full text-sm font-medium mb-4">
               Contact
@@ -54,7 +80,7 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                {/* Social links */}
+              
                 <div className="mt-8">
                   <p className="text-sm text-[#6b7280] mb-4">Retrouvez-moi sur</p>
                   <div className="flex gap-4">
@@ -83,12 +109,12 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Contact form placeholder */}
+              
               <div>
                 <h3 className="text-2xl font-display font-semibold text-[#1f2933] mb-6">
                   Envoyez-moi un message
                 </h3>
-                <form className="space-y-4">
+                <form ref={form} onSubmit={sendEmail} className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-[#1f2933] mb-2">
                       Nom
@@ -98,6 +124,7 @@ const ContactSection = () => {
                       id="name"
                       className="w-full px-4 py-3 bg-[#ffffff] border border-[#e5dfd6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f28c6a]/20 focus:border-[#f28c6a] transition-colors"
                       placeholder="Votre nom"
+                      name="name"
                     />
                   </div>
                   <div>
@@ -109,6 +136,7 @@ const ContactSection = () => {
                       id="email"
                       className="w-full px-4 py-3 bg-[#ffffff] border border-[#e5dfd6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f28c6a]/20 focus:border-[#f28c6a] transition-colors"
                       placeholder="votre@email.com"
+                      name="email"
                     />
                   </div>
                   <div>
@@ -120,6 +148,7 @@ const ContactSection = () => {
                       rows={4}
                       className="w-full px-4 py-3 bg-[#ffffff] border border-[#e5dfd6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f28c6a]/20 focus:border-[#f28c6a] transition-colors resize-none"
                       placeholder="Votre message..."
+                      name="message"
                     />
                   </div>
                   <button
