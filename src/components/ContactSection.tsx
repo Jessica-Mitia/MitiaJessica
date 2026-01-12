@@ -125,6 +125,7 @@ const ContactSection = () => {
                       className="w-full px-4 py-3 bg-[#ffffff] border border-[#e5dfd6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f28c6a]/20 focus:border-[#f28c6a] transition-colors"
                       placeholder="Votre nom"
                       name="name"
+                      required
                     />
                   </div>
                   <div>
@@ -137,6 +138,7 @@ const ContactSection = () => {
                       className="w-full px-4 py-3 bg-[#ffffff] border border-[#e5dfd6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f28c6a]/20 focus:border-[#f28c6a] transition-colors"
                       placeholder="votre@email.com"
                       name="email"
+                      required
                     />
                   </div>
                   <div>
@@ -149,6 +151,7 @@ const ContactSection = () => {
                       className="w-full px-4 py-3 bg-[#ffffff] border border-[#e5dfd6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f28c6a]/20 focus:border-[#f28c6a] transition-colors resize-none"
                       placeholder="Votre message..."
                       name="message"
+                      required
                     />
                   </div>
                   <button
