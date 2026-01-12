@@ -17,7 +17,7 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 w-full">
             <div className="w-[80%] mx-auto">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-[#1f2933] mb-6 animate-fade-up opacity-0 animation-delay-100">
                 Mitia{" "}
