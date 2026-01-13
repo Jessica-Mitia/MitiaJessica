@@ -10,8 +10,8 @@ const ContactSection = () => {
 
     if (!form.current) return;
     emailjs
-      .sendForm("service_p5evpvk", "template_ybp4w99", form.current, {
-        publicKey: "H4ktd-vh5WAL8RC_8",
+      .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
+        publicKey: import.meta.env.VITE_EMAILJS_USER_ID,
       })
       .then(
         () => {
