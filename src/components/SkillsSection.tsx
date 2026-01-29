@@ -1,12 +1,13 @@
 import { Code, Palette, Database, GitBranch, Users, Brain, Target, Heart } from "lucide-react";
 
 const technicalSkills = [
-  { name: "HTML & CSS", icon: Code, level: 85 },
+  { name: "HTML & CSS", icon: Code, level: 90 },
   { name: "React JS", icon: Code, level: 75 },
-  { name: "Java", icon: Code, level: 70 },
-  { name: "PostgreSQL", icon: Database, level: 70 },
-  { name: "Figma", icon: Palette, level: 80 },
-  { name: "Git & GitHub", icon: GitBranch, level: 75 },
+  { name: "Java", icon: Code, level: 75 },
+  { name: "Bootstrap & Tailwind CSS", icon: Code, level: 80 },
+  { name: "PostgreSQL", icon: Database, level: 80 },
+  { name: "Figma", icon: Palette, level: 75 },
+  { name: "Git & GitHub", icon: GitBranch, level: 80 },
 ];
 
 const softSkills = [
